@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Accommodations | 2026 AISC Conference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header */
+        header {
+            background-color: #CE181E;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .logo-section p {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #CE181E 0%, #a01418 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h3 {
+            font-size: 2em;
+            color: #CE181E;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid #CE181E;
+            padding-bottom: 10px;
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #CE181E;
+            margin-top: 20px;
+        }
+
+        .info-card h4 {
+            color: #CE181E;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .info-details p {
+            margin: 12px 0;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .info-details strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .info-details a {
+            color: #CE181E;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .info-details a:hover {
+            opacity: 0.7;
+        }
+
+        /* Map Container */
+        .map-container {
+            margin-top: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            border: 0;
+            width: 100%;
+            height: 450px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #CE181E 0%, #a01418 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 10px;
+        }
+
+        .cta-section h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #CE181E;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background-color: #f5f5f5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-container p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .page-hero h2 {
+                font-size: 2em;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container iframe {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <h1>University of Louisiana at Lafayette®</h1>
+                <p>2026 AISC Conference</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#venue">Venue</a></li>
+                    <li><a href="#hotel">Hotel</a></li>
+                    <li><a href="#directions">Directions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h2>Travel & Accommodations</h2>
+        <p>Plan your visit to Lafayette, Louisiana for the 2026 AISC Conference</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Conference Venue Section -->
+        <section id="venue" class="content-section">
+            <h3>Conference Venue</h3>
+            <p>
+                The 2026 AISC Conference will be held at the Louisiana Immersive Technologies Enterprise (LITE), 
+                a state-of-the-art facility featuring a 175-seat theatre, breakout rooms, and cutting-edge technology. 
+                LITE is conveniently located near the Cajundome with easy access to downtown Lafayette and I-10.
+            </p>
+            
+            <div class="info-card">
+                <h4>Louisiana Immersive Technologies Enterprise (LITE)</h4>
+                <div class="info-details">
+                    <p><strong>Address:</strong> 537 Cajundome Blvd, Suite 101, Lafayette, LA 70506</p>
+                    <p><strong>Phone:</strong> (337) 456-1824</p>
+                    <p><strong>Website:</strong> <a href="https://lite.louisiana.edu/" target="_blank">lite.louisiana.edu</a></p>
+                </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.4!2d-92.047!3d30.211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8626a0e4e4e4e4e4%3A0x4e4e4e4e4e4e4e4e!2sLouisiana%20Immersive%20Technologies%20Enterprise!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hotel Section -->
+        <section id="hotel" class="content-section">
+            <h3>Conference Hotel</h3>
+            <p>
+                We are pleased to announce that the official conference hotel is the Hilton Garden Inn Lafayette/Cajundome. 
+                This conveniently located hotel offers comfortable accommodations and is just minutes from the conference venue.
+            </p>
+            
+            <div class="info-card">
+                <h4>Hilton Garden Inn Lafayette/Cajundome</h4>
+                <div class="info-details">
+                    <p><strong>Address:</strong> 2350 W Congress St, Lafayette, LA 70506</p>
+                    <p><strong>Phone:</strong> (337) 291-1977</p>
+                    <p><strong>Book Now:</strong> <a href="https://www.hilton.com/en/locations/usa/louisiana/lafayette/hilton-garden-inn/" target="_blank">Visit Hotel Website</a></p>
+                </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.7!2d-92.045!3d30.208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8626a0000000000%3A0x0!2sHilton%20Garden%20Inn%20Lafayette%20Cajundome!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting to Lafayette Section -->
+        <section id="directions" class="content-section">
+            <h3>Getting to Lafayette</h3>
+            
+            <div class="two-column">
+                <div class="info-card">
+                    <h4>By Air</h4>
+                    <div class="info-details">
+                        <p><strong>Lafayette Regional Airport (LFT)</strong></p>
+                        <p>Located just 10 minutes from the conference venue</p>
+                        <p>Daily flights from major hubs including Houston, Dallas, and Atlanta</p>
+                        <p><a href="https://www.lftairport.com/" target="_blank">Airport Website</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h4>By Car</h4>
+                    <div class="info-details">
+                        <p><strong>From Interstate 10:</strong></p>
+                        <p>Take Exit 103A (Cajundome Blvd)</p>
+                        <p>LITE is located on Cajundome Blvd near the University of Louisiana at Lafayette campus</p>
+                        <p>Free parking available at the venue</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card" style="margin-top: 30px;">
+                <h4>Ground Transportation</h4>
+                <div class="info-details">
+                    <p><strong>Rental Cars:</strong> Available at Lafayette Regional Airport from major providers</p>
+                    <p><strong>Ride Share:</strong> Uber and Lyft services available throughout Lafayette</p>
+                    <p><strong>Taxi Services:</strong> Several local taxi companies serve the area</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Lafayette Section -->
+        <section class="content-section">
+            <h3>Explore Lafayette</h3>
+            <p>
+                While attending the conference, take time to experience Lafayette's rich culture, world-famous cuisine, 
+                and vibrant music scene. Known as the heart of Cajun and Creole country, Lafayette offers unique 
+                attractions including:
+            </p>
+            
+            <div class="info-card">
+                <div class="info-details">
+                    <p><strong>Cuisine:</strong> Enjoy authentic Cajun and Creole dishes at local restaurants</p>
+                    <p><strong>Music:</strong> Experience live Cajun, Zydeco, and Louisiana music</p>
+                    <p><strong>Culture:</strong> Visit Vermilionville, Acadian Village, and the Acadiana Center for the Arts</p>
+                    <p><strong>Nature:</strong> Explore the unique South Louisiana wetlands and swamp tours</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h3>Ready to Attend?</h3>
+            <p>Registration details will be available soon. Check back for updates!</p>
+            <a href="index.html#registration" class="cta-button">Return to Conference Home</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p><strong>University of Louisiana at Lafayette®</strong></p>
+            <p>Office of Research, Innovation, and Economic Development</p>
+            <p>Martin Hall, Suite 338 | Lafayette, Louisiana 70504</p>
+            <p>Phone: 337-482-5811 | Email: research@louisiana.edu</p>
+            
+            <div class="footer-links">
+                <a href="https://louisiana.edu">UL Lafayette Home</a>
+                <a href="https://vpresearch.louisiana.edu">Research Office</a>
+                <a href="index.html">Conference Home</a>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.7;">
+                © 2026 University of Louisiana at Lafayette®. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
