@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Analytics | 2026 AISC Conference</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
+        header { background-color: #CE181E; color: white; padding: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo-section h1 { font-size: 1.8em; font-weight: 700; margin-bottom: 5px; }
+        .logo-section p { font-size: 0.95em; opacity: 0.95; }
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        nav a:hover { opacity: 0.8; }
+        .page-hero { background: linear-gradient(135deg, #CE181E 0%, #a01418 100%); color: white; padding: 80px 20px; text-align: center; }
+        .page-hero h2 { font-size: 3em; margin-bottom: 20px; font-weight: 700; }
+        .page-hero p { font-size: 1.3em; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .content-section { margin-bottom: 50px; }
+        .content-section h3 { font-size: 2em; color: #CE181E; margin-bottom: 20px; font-weight: 700; border-bottom: 3px solid #CE181E; padding-bottom: 10px; }
+        .content-section p { font-size: 1.15em; line-height: 1.9; color: #555; margin-bottom: 20px; }
+        .content-section ul { margin-left: 30px; margin-bottom: 20px; }
+        .content-section li { font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 12px; }
+        .highlight-box { background-color: #f8f8f8; border-left: 5px solid #CE181E; padding: 30px; margin: 30px 0; border-radius: 5px; }
+        .highlight-box h4 { color: #CE181E; font-size: 1.4em; margin-bottom: 15px; font-weight: 700; }
+        .highlight-box p { font-size: 1.1em; line-height: 1.8; color: #555; }
+        .topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin: 30px 0; }
+        .topic-card { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #CE181E; transition: transform 0.3s; }
+        .topic-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(206, 24, 30, 0.15); }
+        .topic-card h4 { color: #CE181E; font-size: 1.3em; margin-bottom: 15px; font-weight: 700; }
+        .topic-card p { font-size: 1.05em; line-height: 1.7; color: #555; }
+        .cta-section { background: linear-gradient(135deg, #CE181E 0%, #a01418 100%); color: white; padding: 50px 20px; text-align: center; margin: 50px 0; border-radius: 10px; }
+        .cta-section h3 { font-size: 2em; margin-bottom: 15px; color: white; }
+        .cta-section p { font-size: 1.1em; margin-bottom: 25px; color: white; }
+        .cta-button { display: inline-block; background-color: white; color: #CE181E; padding: 15px 40px; font-size: 1.1em; font-weight: 700; text-decoration: none; border-radius: 50px; transition: all 0.3s; margin: 0 10px; }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        footer { background-color: #1a1a1a; color: white; padding: 40px 20px 20px; margin-top: 60px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-container p { margin-bottom: 10px; opacity: 0.9; }
+        .footer-links { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); }
+        .footer-links a { color: white; text-decoration: none; margin: 0 15px; opacity: 0.8; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; text-align: center; }
+            nav ul { flex-direction: column; gap: 15px; margin-top: 20px; }
+            .page-hero h2 { font-size: 2em; }
+            .topic-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <h1>University of Louisiana at Lafayette®</h1>
+                <p>2026 AISC Conference</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#topics">All Topics</a></li>
+                    <li><a href="index.html#registration">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h2>Advanced Analytics</h2>
+        <p>High-dimensional data analysis and Bayesian statistics for complex modern data challenges</p>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h3>Overview</h3>
+            <p>
+                The Advanced Analytics track focuses on sophisticated statistical methodologies designed to tackle 
+                the complexities of modern data. As datasets grow in both size and dimensionality, traditional 
+                approaches often fall short. This track explores cutting-edge techniques in high-dimensional data 
+                analysis and Bayesian statistics that provide powerful tools for extracting meaningful insights 
+                from complex data structures.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h3>Key Topics</h3>
+            
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h4>High Dimensional Data Analysis</h4>
+                    <p>
+                        Explore methods for analyzing data where the number of variables exceeds or approaches the 
+                        number of observations. Topics include variable selection, regularization methods (LASSO, 
+                        Ridge, Elastic Net), dimension reduction techniques, sparse modeling, and high-dimensional 
+                        inference.
+                    </p>
+                </div>
+
+                <div class="topic-card">
+                    <h4>Bayesian Statistics</h4>
+                    <p>
+                        Discover Bayesian approaches to statistical inference including prior elicitation, posterior 
+                        computation, Markov Chain Monte Carlo methods, variational inference, Bayesian model selection, 
+                        hierarchical modeling, and empirical Bayes methods.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Applications</h3>
+            <ul>
+                <li><strong>Genomics:</strong> Gene expression analysis, genome-wide association studies, and personalized medicine</li>
+                <li><strong>Neuroscience:</strong> Brain imaging analysis and neural network modeling</li>
+                <li><strong>Finance:</strong> Portfolio optimization, risk management, and algorithmic trading in high-frequency markets</li>
+                <li><strong>Marketing:</strong> Customer segmentation and personalization at scale</li>
+                <li><strong>Climate Science:</strong> Modeling complex climate systems with uncertainty quantification</li>
+                <li><strong>Text Analytics:</strong> Natural language processing with high-dimensional feature spaces</li>
+            </ul>
+        </section>
+
+        <div class="highlight-box">
+            <h4>Computational Advances</h4>
+            <p>
+                Modern advanced analytics requires sophisticated computational tools. Sessions will cover scalable 
+                algorithms for Bayesian computation, distributed computing frameworks for high-dimensional problems, 
+                GPU acceleration techniques, and approximation methods that balance computational efficiency with 
+                statistical accuracy.
+            </p>
+        </div>
+
+        <section class="cta-section">
+            <h3>Master Advanced Techniques</h3>
+            <p>Learn from experts in high-dimensional and Bayesian methods</p>
+            <a href="index.html#registration" class="cta-button">Register Now</a>
+            <a href="index.html#topics" class="cta-button">Explore Other Topics</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p><strong>University of Louisiana at Lafayette®</strong></p>
+            <p>Office of Research, Innovation, and Economic Development</p>
+            <p>Martin Hall, Suite 338 | Lafayette, Louisiana 70504</p>
+            <p>Phone: 337-482-5811 | Email: research@louisiana.edu</p>
+            
+            <div class="footer-links">
+                <a href="https://louisiana.edu">UL Lafayette Home</a>
+                <a href="https://vpresearch.louisiana.edu">Research Office</a>
+                <a href="index.html">Conference Home</a>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.7;">
+                © 2026 University of Louisiana at Lafayette®. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

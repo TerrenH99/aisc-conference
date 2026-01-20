@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science & AI | 2026 AISC Conference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #CE181E;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .logo-section p {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #CE181E 0%, #a01418 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .page-hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .content-section h3 {
+            font-size: 2em;
+            color: #CE181E;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid #CE181E;
+            padding-bottom: 10px;
+        }
+
+        .content-section p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .content-section ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content-section li {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background-color: #f8f8f8;
+            border-left: 5px solid #CE181E;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box h4 {
+            color: #CE181E;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .highlight-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .topic-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #CE181E;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(206, 24, 30, 0.15);
+        }
+
+        .topic-card h4 {
+            color: #CE181E;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .topic-card p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #CE181E 0%, #a01418 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 10px;
+        }
+
+        .cta-section h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #CE181E;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background-color: #f5f5f5;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-container p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .page-hero h2 {
+                font-size: 2em;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <h1>University of Louisiana at Lafayette®</h1>
+                <p>2026 AISC Conference</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#topics">All Topics</a></li>
+                    <li><a href="index.html#registration">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h2>Data Science & AI</h2>
+        <p>Exploring the intersection of big data, machine learning, and deep learning for transformative insights</p>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h3>Overview</h3>
+            <p>
+                The Data Science & AI track represents the cutting edge of statistical and computational research. 
+                As we navigate an era of unprecedented data availability, this track brings together researchers 
+                and practitioners working at the frontier of big data analytics, machine learning algorithms, and 
+                deep learning architectures.
+            </p>
+            <p>
+                From predictive modeling to artificial intelligence applications, these sessions will showcase how 
+                modern computational methods are transforming our ability to extract insights from complex, 
+                large-scale datasets across diverse domains.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h3>Key Topics</h3>
+            
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h4>Big Data</h4>
+                    <p>
+                        Tackle challenges in processing, storing, and analyzing massive datasets. Explore distributed 
+                        computing frameworks, scalable algorithms, data streaming methods, and techniques for handling 
+                        volume, velocity, and variety in modern data ecosystems.
+                    </p>
+                </div>
+
+                <div class="topic-card">
+                    <h4>Data Science & Machine Learning</h4>
+                    <p>
+                        Discover advances in supervised and unsupervised learning, ensemble methods, feature engineering, 
+                        model selection and validation, interpretable machine learning, and automated machine learning 
+                        (AutoML) pipelines.
+                    </p>
+                </div>
+
+                <div class="topic-card">
+                    <h4>Deep Learning</h4>
+                    <p>
+                        Explore neural network architectures including convolutional neural networks, recurrent neural 
+                        networks, transformers, generative models, and applications in computer vision, natural language 
+                        processing, and reinforcement learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Application Domains</h3>
+            <p>
+                Data science and AI methods are revolutionizing fields across industry and academia. Sessions will 
+                feature applications in:
+            </p>
+            <ul>
+                <li><strong>Healthcare:</strong> Medical image analysis, precision medicine, and clinical decision support systems</li>
+                <li><strong>Finance:</strong> Algorithmic trading, fraud detection, and credit risk modeling</li>
+                <li><strong>E-commerce:</strong> Recommendation systems, customer segmentation, and demand forecasting</li>
+                <li><strong>Manufacturing:</strong> Predictive maintenance, quality control, and supply chain optimization</li>
+                <li><strong>Transportation:</strong> Autonomous vehicles, traffic prediction, and route optimization</li>
+                <li><strong>Climate Science:</strong> Climate modeling, environmental monitoring, and disaster prediction</li>
+                <li><strong>Social Media:</strong> Sentiment analysis, content moderation, and network analysis</li>
+            </ul>
+        </section>
+
+        <div class="highlight-box">
+            <h4>Emerging Trends & Challenges</h4>
+            <p>
+                This track will address critical contemporary issues including responsible AI development, algorithmic 
+                fairness and bias mitigation, model interpretability and explainability, privacy-preserving machine 
+                learning, sustainable AI computing, and the integration of domain knowledge with data-driven approaches. 
+                Engage with thought leaders discussing both the tremendous opportunities and important ethical 
+                considerations in this rapidly evolving field.
+            </p>
+        </div>
+
+        <section class="content-section">
+            <h3>Who Should Attend</h3>
+            <ul>
+                <li>Data scientists and machine learning engineers developing production systems</li>
+                <li>Academic researchers advancing theoretical foundations and novel algorithms</li>
+                <li>Industry practitioners implementing AI solutions to business problems</li>
+                <li>Students and early-career professionals entering the field</li>
+                <li>Statisticians integrating modern ML methods with classical approaches</li>
+                <li>Domain experts collaborating on interdisciplinary AI projects</li>
+            </ul>
+        </section>
+
+        <section class="cta-section">
+            <h3>Shape the Future of AI</h3>
+            <p>Connect with innovators advancing data science and artificial intelligence</p>
+            <a href="index.html#registration" class="cta-button">Register Now</a>
+            <a href="index.html#topics" class="cta-button">Explore Other Topics</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p><strong>University of Louisiana at Lafayette®</strong></p>
+            <p>Office of Research, Innovation, and Economic Development</p>
+            <p>Martin Hall, Suite 338 | Lafayette, Louisiana 70504</p>
+            <p>Phone: 337-482-5811 | Email: research@louisiana.edu</p>
+            
+            <div class="footer-links">
+                <a href="https://louisiana.edu">UL Lafayette Home</a>
+                <a href="https://vpresearch.louisiana.edu">Research Office</a>
+                <a href="index.html">Conference Home</a>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.7;">
+                © 2026 University of Louisiana at Lafayette®. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
